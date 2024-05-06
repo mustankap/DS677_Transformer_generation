@@ -1,31 +1,3 @@
-"""
-This file contains the training pipeline for a Transformer model specialized in
-melody generation. It includes functions to calculate loss, perform training steps,
-and orchestrate the training process over multiple epochs. The script also
-demonstrates the use of the MelodyGenerator class to generate a melody after training.
-
-The training process uses a custom implementation of the Transformer model,
-defined in the 'transformer.py' module, and prepares data using the
-MelodyPreprocessor class from 'melodypreprocessor.py'.
-
-Global parameters such as the number of epochs 30, batch size 32, Max positional encoding 100,
- and path to the dataset
-are defined. The script supports dynamic padding of sequences and employs the
-Sparse Categorical Crossentropy loss function for model training.
-
-For simplicity's sake training does not deal with masking of padded values
-in the encoder and decoder. Also, look-ahead masking is not implemented.
-Both of these are left as an exercise for the student.
-
-Key Functions:
-- _calculate_loss_function: Computes the loss between actual and predicted sequences.
-- _train_step: Executes a single training step, including forward pass and backpropagation.
-- train: Runs the training loop over the entire dataset for a given number of epochs.
-- _right_pad_sequence_once: Utility function for padding sequences.
-
-The script concludes by instantiating the Transformer model, conducting the training,
-and generating a sample melody using the trained model.
-"""
 
 import tensorflow as tf
 from keras.losses import SparseCategoricalCrossentropy

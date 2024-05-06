@@ -1,33 +1,4 @@
-"""
-This script defines the Transformer model, a state-of-the-art model architecture used
-for a variety of natural language processing tasks, adapted here for music generation.
-The Transformer model relies on the mechanism of attention, differentially weighting
-the significance of different input elements.
 
-The script includes the implementation of various components of the Transformer
-architecture, including the Encoder, Decoder, and their respective layers. It also
-defines a sinusoidal positional encoding function that provides the model with
-information about the relative position of tokens in the sequence.
-
-Key Components:
-- Transformer: The main model class combining the Encoder and Decoder.
-- Encoder: Processes the input sequence and generates a context-rich representation.
-- Decoder: Generates the output sequence based on the Encoder's output and its own
-  input.
-- EncoderLayer and DecoderLayer: Individual layers used in the Encoder and Decoder.
-- _get_angles and sinusoidal_position_encoding: Functions to generate positional
-  encoding based on the sequence length and model dimensionality.
-
-Usage:
-To use the Transformer model, instantiate it with the required dimensions, number
-of layers, vocabulary sizes, and other parameters. The model can then be used for
-training or inference tasks in music generation or other sequence-to-sequence
-transformations.
-
-Note:
-This implementation of the Transformer model is designed for flexibility and can be
-adapted for various sequence-to-sequence tasks beyond music generation.
-"""
 
 import numpy as np
 import tensorflow as tf

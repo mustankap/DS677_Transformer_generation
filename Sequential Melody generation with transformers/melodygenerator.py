@@ -1,35 +1,3 @@
-"""
-melody_generator.py
-
-dataset: //pitch octave pitch duration quarter note length
-
-This script defines the MelodyGenerator class, which is responsible for generating
-melodies using a trained Transformer model. The class offers functionality to produce
-a sequence of musical notes, starting from a given seed sequence and extending it
-to a specified maximum length.
-
-The MelodyGenerator class leverages the trained Transformer model's ability to
-predict subsequent notes in a melody based on the current sequence context. It
-achieves this by iteratively appending each predicted note to the existing sequence
-and feeding this extended sequence back into the model for further predictions.
-
-This iterative process continues until the generated melody reaches the desired length
-or an end-of-sequence token is predicted. The class utilizes a tokenizer to encode and
-decode note sequences to and from the format expected by the Transformer model.
-
-Key Components:
-- MelodyGenerator: The primary class defined in this script, responsible for the
-  generation of melodies.
-
-Usage:
-The MelodyGenerator class can be instantiated with a trained Transformer model
-and an appropriate tokenizer. Once instantiated, it can generate melodies by
-calling the `generate` method with a starting note sequence.
-
-Note:
-This class is intended to be used with a Transformer model that has been
-specifically trained for melody generation tasks.
-"""
 
 import tensorflow as tf
 
@@ -125,7 +93,7 @@ class MelodyGenerator:
 
     def _decode_generated_sequence(self, generated_sequence):
         """
-        Decodes the generated sequence of notes.
+        Decodes the generated sequence of notes
 
         Parameters:
             generated_sequence (tf.Tensor): Tensor with note indexes generated.

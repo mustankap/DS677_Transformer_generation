@@ -1,35 +1,3 @@
-"""
-melody_preprocessor.py
-
-This script defines the MelodyPreprocessor class, a utility for preparing melody
-datasets for training in a sequence-to-sequence Transformer model. The class
-focuses on processing melody data by tokenizing and encoding the melodies, and
-subsequently creating TensorFlow datasets suitable for training sequence-to-sequence
-models.
-
-The MelodyPreprocessor handles the entire preprocessing pipeline including loading
-melodies from a dataset file, parsing the melodies into individual notes, tokenizing
-and encoding these notes, and forming input-target pairs for model training. It
-also includes functionality for padding sequences to a uniform length.
-
-Key Features:
-- Tokenization and encoding of melodies.
-- Dynamic calculation of maximum sequence length based on the dataset.
-- Creation of input-target pairs for sequence-to-sequence training.
-- Conversion of processed data into TensorFlow datasets.
-
-Usage:
-To use the MelodyPreprocessor, initialize it with the path to a dataset containing
-melodies and the desired batch size. Then call `create_training_dataset` to prepare
-the dataset for training a Transformer model.
-
-
-Note:
-This script is intended to be used with datasets containing melody sequences in a
-specific format, where each melody is represented as a string of comma-separated
-musical notes (pitch with octave + duration in quarter length).
-"""
-
 
 import json
 
