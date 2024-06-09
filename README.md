@@ -7,9 +7,8 @@
 
 ### Music Generation using MIDI Maestro Dataset
 
-#### Try 1
 
-#### Try 2
+#### v.0.0.1
 
 The MIDI dataset consist of a number of parts (for different instruments) and each part contains a set of instructions setting out what notes are played, when they are played and how they are played ie loudness and speed.
 
